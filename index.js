@@ -1,25 +1,29 @@
 //setInterval(setClock, 1000)
 
-//not to self. work on the second hand function it is not working 
+//not to self. work on the second hand function the query selector is not working 
 
 
 
 
 //const hourHand = document.querySelector('[data-hour-hand]');
-//const minuteHand = document.querySelector('[data-minute-hand]');
-const secondHand = document.querySelector(".data-second-hand");
+const minuteHand = document.querySelector('[data-minute-hand]');
+//const secondHand = document.querySelector('[data-second-hand]');
+const secondHand = document.querySelector('data-second-hand');
 
 function setClock() {
-   const currentDate = new Date();
+   const currentDate = new Date()
 
    //seconds function
    //const secondsRatio = currentDate.getSeconds() / 60
-   const seconds = currentDate.getSeconds();
-   const secondsRatio = ((seconds / 60) * 360) + 90;
-   secondHand.style.transform = `rotate(${secondsRatio}deg)`;
-
+   const seconds = currentDate.getSeconds()
+   const timeInterval=6
+   //const secondsRatio = ((seconds / 60) * 360) + 90
+   //secondHand.style.transform = `rotate(${secondsRatio}deg)`
+   secondHand.style.transform = 'rotate(' + (seconds * timeInterval) + 'deg)'
+   
    //minute function
    //const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60
+
    
    //hour function
    //const hoursRatio = (minutesRatio + currentDate.getHours()) / 12
@@ -35,6 +39,6 @@ function setClock() {
   // element.style.setProperty('--rotation', rotationRatio * 360)
 //}
 
-setInterval(setClock, 1000);
+setInterval(setClock, 100);
 
 setClock();
