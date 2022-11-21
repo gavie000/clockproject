@@ -12,6 +12,19 @@ body{
    overflow: hidden;
 }
 
+.header {
+   display:flex;
+   flex-direction: column;
+   align-self: start;
+   justify-content: center;
+   align-items: center;
+   position:fixed;
+   width: 500px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   background-color: #9198e5;
+}
+
 .clock {
    width:300px;
    height: 300px;
@@ -89,4 +102,17 @@ body{
    width:10px;
    height:35%;
    background-color: black;
+}
+
+.edit {
+   position:fixed;
+   background-color: #9198e5;
+   text-align: center;
+   width: 100px;
+   height:50px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-self:flex-end;
+   order:5;
 }
